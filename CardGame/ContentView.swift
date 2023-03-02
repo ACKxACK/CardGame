@@ -20,10 +20,14 @@ struct ContentView: View {
             Image("background-plain")
                 .ignoresSafeArea()
             VStack{
+                Text("Card Game")
+                    .font(.system(size: 35))
+                    .shadow(color: .black, radius: 50)
                 Image("logo")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                    .padding(.bottom, 50)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 150, alignment: .center)
+                    .padding(.bottom, 25)
                 HStack {
                     Spacer()
                     Image(playerCard)
@@ -80,7 +84,7 @@ struct ContentView: View {
         } else if cpuCardValue > playerCardValue {
             cpuScore += 1
         } else {
-            print("Draw")
+            print("draw")
         }
     }
 }
