@@ -1,1 +1,1 @@
-# CardGame It's a simple Card Game.
+It's a simple Card Game.
